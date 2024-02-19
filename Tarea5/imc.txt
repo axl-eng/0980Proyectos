@@ -1,0 +1,3 @@
+Axel Aguilar 57.00 1.68 20.20 Intervalo Normal
+Luis  32.50 1.68 11.52 Insuficiencia Ponderal
+Carlos 80.00 1.50 35.56 Obesidad de Clase 2
