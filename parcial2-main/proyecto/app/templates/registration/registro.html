@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        /* Estilos para la barra de navegación */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            overflow: hidden;
+        }
+        .nav-bar a {
+            float: right;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav-bar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Estilos para el formulario */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        button {
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="nav-bar">
+        <a href="#">Registrarse</a>
+        <a href="#">Inicio</a>
+    </div>
+
+    <!-- Formulario de registro -->
+    <form method="post">
+        {% csrf_token %}
+        <h2>Registro</h2>
+        <input type="text" name="first_name" placeholder="Nombre">
+        <input type="text" name="last_name" placeholder="Apellido">
+        <input type="text" name="dpi" placeholder="DPI">
+        <input type="date" name="birthdate" placeholder="Fecha de Nacimiento">
+        <input type="tel" name="phone" placeholder="Teléfono">
+        <input type="text" name="username" placeholder="Nombre de Usuario">
+        <input type="email" name="email" placeholder="Correo Electrónico">
+        <input type="password" name="password1" placeholder="Contraseña">
+        <input type="password" name="password2" placeholder="Confirmación de Contraseña">
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>
